@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/seito2014/demo-sample",
   "devDependencies": {
+    "browser-sync": "^1.9.1",
     "gulp": "^3.8.10",
     "gulp-ejs": "^1.0.0",
     "gulp-pleeease": "^1.1.0",
