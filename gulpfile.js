@@ -6,6 +6,7 @@ var sass = require("gulp-ruby-sass"),
 var DEV = "app/dev",
     PUBLIC = "app/public";
 
+//style
 gulp.task("style", function() {
     gulp.src(DEV + "/sass/**/*.scss")
         .pipe(sass({
@@ -20,4 +21,10 @@ gulp.task("style", function() {
             minifier: false
         }))
         .pipe(gulp.dest(PUBLIC + "/css"));
+});
+
+//watch
+gulp.task("default", function() {
+    //gulp.watch(["js/**/*.js","!js/min/**/*.js"],["js"]);
+    gulp.watch(DEV + "/sass/**/*.scss",["style"]);
 });
