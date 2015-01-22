@@ -5,6 +5,14 @@
 /*
 * 変数用scss(カラーコード以外)
 */
+.header_inner, .contents_inner {
+  zoom: 1; }
+  .header_inner:before, .contents_inner:before, .header_inner:after, .contents_inner:after {
+    content: "";
+    display: block; }
+  .header_inner:after, .contents_inner:after {
+    clear: both; }
+
 body {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -453,9 +461,67 @@ body {
   line-height: 1; }
 
 .wrapper {
+  width: 100%; }
+
+/*
+* pages
+*/
+.header {
+  width: 100%; }
+
+.header_inner {
+  width: 980px;
+  height: 80px;
+  margin: 0 auto;
+  background: #eee;
+  padding: 10px; }
+
+.header_logo {
+  float: left;
+  width: 200px;
+  height: 60px;
+  background: #fff; }
+
+.header_module {
+  float: right;
+  width: 150px;
+  height: 60px;
+  background: #fff;
+  margin-left: 10px; }
+
+.footer {
+  width: 100%; }
+
+.footer_inner {
+  width: 980px;
+  height: 80px;
+  margin: 0 auto;
+  background: #eee;
+  text-align: center; }
+  .footer_inner > small {
+    display: inline-block;
+    height: 80px;
+    line-height: 80px; }
+
+.contents {
   width: 100%;
-  max-width: 980px;
+  margin: 30px 0; }
+
+.contents_inner {
+  width: 980px;
   margin: 0 auto; }
+
+.main {
+  float: left;
+  width: 70%;
+  background: #eee;
+  min-height: 600px; }
+
+.side {
+  float: right;
+  width: 25%;
+  background: #eee;
+  min-height: 600px; }
 
 /*
 * pages
@@ -467,3 +533,14 @@ body {
   font-size: 12px;
   font-size: 1.2rem;
   text-align: left; }
+
+.main_visual {
+  width: 100%;
+  margin-top: 30px; }
+
+.main_visual_inner {
+  width: 980px;
+  margin: 0 auto; }
+  .main_visual_inner > img {
+    width: 100%;
+    height: auto; }
