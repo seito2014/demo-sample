@@ -1,0 +1,56 @@
+.slash {
+    overflow: hidden;
+    padding-top: 50px;
+    background: #fff;
+    .slash_inner {
+        width: 655px;
+        height: 437px;
+        overflow: hidden;
+        margin: 0 auto;
+        position: relative;
+        background: #fff;
+        z-index: 1;
+        transition: opacity 1s;
+        opacity: 1;
+        &.is_hidden {
+            opacity: 0;
+        }
+    }
+    .slash_img {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        backface-visibility: hidden;
+        &.slash_wrap {
+            z-index: 4;
+        }
+        &.up {
+            z-index: 3;
+        }
+        &.down {
+            z-index: 2;
+        }
+    }
+    .slash_text{
+        width: 655px;
+        height: 437px;
+        line-height: 437px;
+        text-align: center;
+        font-size: 160px;
+        font-weight: bold;
+    }
+}
+
+.back_text {
+    width: 100%;
+    height: 437px;
+    line-height: 437px;
+    text-align: center;
+    font-size: 160px;
+    font-weight: bold;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    z-index: 0;
+}
