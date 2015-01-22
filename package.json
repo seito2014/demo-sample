@@ -23,6 +23,7 @@
   "homepage": "https://github.com/seito2014/demo-sample",
   "devDependencies": {
     "gulp": "^3.8.10",
+    "gulp-ejs": "^1.0.0",
     "gulp-pleeease": "^1.1.0",
     "gulp-ruby-sass": "^0.7.1"
   }

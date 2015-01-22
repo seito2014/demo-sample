@@ -1,10 +1,18 @@
 var gulp = require("gulp");
 
-var sass = require("gulp-ruby-sass"),
+var ejs = require("gulp-ejs"),
+    sass = require("gulp-ruby-sass"),
     pleeease = require('gulp-pleeease');
 
 var DEV = "app/dev",
     PUBLIC = "app/public";
+
+//ejs
+gulp.task("ejs", function() {
+    gulp.src(DEV + "/ejs/**/*.ejs")
+        .pipe(ejs())
+        .pipe(gulp.dest(PUBLIC));
+});
 
 //style
 gulp.task("style", function() {
