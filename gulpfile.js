@@ -36,6 +36,24 @@ gulp.task("style", function() {
         .pipe(browser.reload({stream:true}));
 });
 
+//copy
+gulp.task("js", function() {
+    return gulp.src(DEV + "/js/**/*.js")
+        .pipe(gulp.dest(PUBLIC + "/js"));
+});
+
+//lib
+gulp.task("lib", function() {
+    return gulp.src(DEV + "/lib/**/*.js")
+        .pipe(gulp.dest(PUBLIC + "/lib"));
+});
+
+//lib
+gulp.task("images", function() {
+    return gulp.src(DEV + "/images/**/*")
+        .pipe(gulp.dest(PUBLIC + "/images"));
+});
+
 //browser sync
 gulp.task("server", function() {
     browser({
@@ -47,8 +65,10 @@ gulp.task("server", function() {
 });
 
 //watch
-gulp.task("default",["server"], function() {
+gulp.task("default",["ejs","style","js","lib","images","server"], function() {
     gulp.watch(DEV + "/ejs/**/*.ejs",["ejs"]);
     gulp.watch(DEV + "/sass/**/*.scss",["style"]);
-    //gulp.watch(["js/**/*.js","!js/min/**/*.js"],["js"]);
+    gulp.watch(DEV + "js/**/*.js",["js"]);
+    gulp.watch(DEV + "lib/**/*.js",["lib"]);
+    gulp.watch(DEV + "images/**/*",["images"]);
 });
