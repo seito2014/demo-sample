@@ -10,7 +10,9 @@ var DEV = "app/dev",
 
 //ejs
 gulp.task("ejs", function() {
-    gulp.src(DEV + "/ejs/**/*.ejs")
+    gulp.src(
+        [DEV + "/ejs/**/*.ejs",'!' + DEV + "/ejs/**/_*.ejs"]
+    )
         .pipe(ejs())
         .pipe(gulp.dest(PUBLIC))
         .pipe(browser.reload({stream:true}));
